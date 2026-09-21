@@ -136,34 +136,21 @@
             </a>
 
             <!-- TROQUE seuemail@exemplo.com pelo seu Gmail nas 2 linhas abaixo -->
-            <form
-              id="contact-form"
-              class="contact-form"
-              action="https://formsubmit.co/dearaujorochacaroline@gmail.com"
-              method="POST">
-              <input
-                type="hidden"
-                name="_subject"
-                value="Nova mensagem do portfólio!" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="text"
-                name="name"
-                placeholder="Seu nome"
-                required
-                maxlength="100" />
+            <form id="contact-form" class="contact-form" novalidate>
+              <input type="text" name="nome" required placeholder="Seu nome" />
+
               <input
                 type="email"
                 name="email"
-                placeholder="Seu e-mail"
                 required
-                maxlength="255" />
+                placeholder="seuemail@exemplo.com" />
+
               <textarea
-                name="message"
-                placeholder="Sua mensagem"
+                name="mensagem"
+                rows="5"
                 required
-                maxlength="1000"
-                rows="5"></textarea>
+                placeholder="Conte sobre sua ideia..."></textarea>
+
               <button type="submit">Enviar mensagem</button>
               <p id="form-status" role="status" aria-live="polite"></p>
             </form>

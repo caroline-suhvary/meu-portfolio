@@ -444,30 +444,34 @@ document
   .forEach((section) => observer.observe(section));
 
 /* Envio do formulário de contato sem sair da página */
+/* TROQUE pela URL do seu app da Web do Google Apps Script */
+const FORM_URL =
+  "https://script.google.com/macros/s/AKfycbzF9x3ZkmNYiwJulRbKp5NE8OxcjtIFv_9ZMhK7Zt5sYzcO7GptqudfZ_XY2igXnb65/exec";
+
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
 
-contactForm.addEventListener("submit", async (event) => {
+contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const submitButton = contactForm.querySelector("button[type='submit']");
-  submitButton.disabled = true;
+  const botao = contactForm.querySelector("button[type=submit]");
+  botao.disabled = true;
   formStatus.textContent = "Enviando...";
 
+  const dados = Object.fromEntries(new FormData(contactForm).entries());
+
   try {
-    const response = await fetch(contactForm.action, {
+    await fetch(FORM_URL, {
       method: "POST",
-      body: new FormData(contactForm),
-      headers: { Accept: "application/json" },
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(dados),
     });
-
-    if (!response.ok) throw new Error("Falha no envio");
-
-    formStatus.textContent = "Mensagem enviada! Obrigada pelo contato. ✨";
+    formStatus.textContent = "Mensagem enviada! Obrigada pelo contato 💛";
     contactForm.reset();
-  } catch (error) {
+  } catch (erro) {
     formStatus.textContent =
-      "Não foi possível enviar. Tente novamente ou me chame no WhatsApp.";
+      "Não foi possível enviar. Tente pelo WhatsApp ou linkedin.";
   } finally {
-    submitButton.disabled = false;
+    botao.disabled = false;
   }
 });
