@@ -82,6 +82,22 @@ const projects = [
     image: "img/tetris.PNG",
     theme: "project-sun",
   },
+  {
+    title: "Análise de Dados completa em planilha do Excel",
+    category: "analise de dados",
+    filtros: ["Análise de Dados"],
+    url: "https://senacspedu-my.sharepoint.com/:x:/g/personal/caroline_arocha5_senacsp_edu_br/IQD_vOKWRavxTrN2EDy_m-WeAVJrfiSkFM4WAcUav1yIWYA?e=F9LR8M",
+    description: [
+      "Planilha contendo análise de dados de faturamento da Empresa XYZ",
+      "Contém opções de filtragem múltipla, digitando em caixas de pesquisa e cliando no botão de pesquisar",
+      "Também contém opções de filtragens em funções nativas do Excel. ",
+      "Tabelas dinâmicas, gráficos dinâmicos, KPIs, dashboard e botões de navegação entre as abas.",
+      "Utilizei linguagem SQL para criação de tabelas com dados agrupados, VBA e OfficeScripts(typescript) para filtragemdinâmica dos dados em caixas de pesquisa. ",
+    ],
+    tech: ["VBA", "Typescript", "funções"],
+    image: "img/dashboardexcel.png",
+    theme: "project-coral",
+  },
 ];
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /* EDITE AQUI: adicione certificados em image: "img/certificado.jpg". */
