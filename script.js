@@ -3,6 +3,7 @@ const projects = [
   {
     title: "Joguinho: Baiacu vs Água-viva",
     category: "games",
+    filtros: ["Aplicativo", "Front-end"],
     url: "https://caroline-suhvary.github.io/baiacu-vs-aguaviva/",
     description: [
       "Game onde o baiacu precisa matar as águas-vivas para não ser queimado.",
@@ -16,6 +17,7 @@ const projects = [
   {
     title: "Landing Page Responsiva",
     category: "Site comercial",
+    filtros: ["Front-end"],
     url: "https://caroline-suhvary.github.io/simples-pagina-responsiva/",
     description: [
       "Página web com menu e totalmente responsiva.",
@@ -28,6 +30,7 @@ const projects = [
   {
     title: "Jogo de cartas - Tarot do Dia",
     category: "Site comercial",
+    filtros: ["Aplicativo", "Front-end"],
     url: "https://caroline-suhvary.github.io/tarot-do-dia/",
     description: [
       "Jogo de tarot; Clique no botão para misturar as cartas e selecione uma carta.",
@@ -40,6 +43,7 @@ const projects = [
   {
     title: "Joguinho: Block Puzzle - Quadradinhos Coloridos",
     category: "games",
+    filtros: ["Aplicativo", "Front-end"],
     url: "https://caroline-suhvary.github.io/quadradinhos-coloridos/",
     description: [
       "Utilize as teclas ← → para mover a peça para os lados",
@@ -54,6 +58,7 @@ const projects = [
   {
     title: "Landing Page do livro 'A biblioteca da Meia Noite' ",
     category: "Site comercial",
+    filtros: ["Front-end"],
     url: "https://caroline-suhvary.github.io/sinopse-livro/",
     description: [
       "Landing Page contendo a Sinopse do livro A biblioteca da Meia-Noite, de Matt Haig",
@@ -66,6 +71,7 @@ const projects = [
   {
     title: "Joguinho de TETRIS clássico",
     category: "games",
+    filtros: ["Aplicativo", "Front-end"],
     url: "https://caroline-suhvary.github.io/tetris/",
     description: [
       "← → movem a peça, ↓ acelera a queda, ↑ ou Espaço giram a peça",
@@ -322,17 +328,30 @@ const skills = [
 ];
 
 const projectsGrid = document.querySelector("#projects-grid");
+const projectFilters = document.querySelector("#project-filters");
 const skillsGrid = document.querySelector("#skills-grid");
 const modal = document.querySelector("#skill-modal");
 const closeButton = document.querySelector(".close-button");
 let lastFocusedSkill;
 
-projectsGrid.innerHTML = projects
-  .map(
-    (project, index) => `
+const availableFilters = [
+  ...new Set(projects.flatMap((project) => project.filtros || [])),
+].sort((first, second) => first.localeCompare(second, "pt-BR"));
+
+function renderProjects(selectedFilter = "todos") {
+  const visibleProjects =
+    selectedFilter === "todos"
+      ? projects
+      : projects.filter((project) =>
+          (project.filtros || []).includes(selectedFilter),
+        );
+
+  projectsGrid.innerHTML = visibleProjects
+    .map(
+      (project) => `
   <article class="project-card">
     <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-preview ${project.theme}" aria-label="Abrir ${project.title} em nova aba">
-      <span class="project-number">${String(index + 1).padStart(2, "0")}</span>
+      <span class="project-number">${String(projects.indexOf(project) + 1).padStart(2, "0")}</span>
       ${
         project.image
           ? `<div class="project-image-frame"><img src="${project.image}" alt="Miniatura do projeto ${project.title}"></div>`
@@ -347,8 +366,37 @@ projectsGrid.innerHTML = projects
       <div class="tags">${project.tech.map((item) => `<span>${item}</span>`).join("")}</div>
     </div>
   </article>`,
+    )
+    .join("");
+}
+
+projectFilters.innerHTML = ["todos", ...availableFilters]
+  .map(
+    (filter, index) => `
+      <button
+        class="project-filter${index === 0 ? " active" : ""}"
+        type="button"
+        data-filter="${filter}"
+        aria-pressed="${index === 0}">
+        ${filter === "todos" ? "Mostrar tudo" : filter}
+      </button>`,
   )
   .join("");
+
+projectFilters.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-filter]");
+  if (!button) return;
+
+  projectFilters.querySelectorAll("[data-filter]").forEach((filterButton) => {
+    const isActive = filterButton === button;
+    filterButton.classList.toggle("active", isActive);
+    filterButton.setAttribute("aria-pressed", String(isActive));
+  });
+
+  renderProjects(button.dataset.filter);
+});
+
+renderProjects();
 
 skillsGrid.innerHTML = skills
   .map(
