@@ -1,77 +1,72 @@
 /* EDITE AQUI: troque links, textos, tecnologias e imagens dos projetos. */
 const projects = [
   {
-    title: "Joguinho: Baiacu vs Água-viva",
-    category: "games",
-    filtros: ["Aplicativo", "Front-end"],
-    url: "https://caroline-suhvary.github.io/baiacu-vs-aguaviva/",
+    title: "MEU KAMBAMBAM — Kanban Full Stack & Colaborativo",
+    category: "produtividade",
+    filtros: ["Dev Full Stack"],
+    url: "https://meu-kambambam.vercel.app/",
     description: [
-      "Game onde o baiacu precisa matar as águas-vivas para não ser queimado.",
-      "Use as teclas W/S ou as setas ↑/↓ para nadar e tecla de Espaço para atirar veneno.",
-      "Feito com HTML, CSS e Javascript puro.",
+      "Kanban privado com login, grupos de até 4 participantes, convites, CRUD de tarefas, upload/download de anexos (com validação de tamanho/quantidade) e políticas RLS no banco. ",
     ],
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    image: "img/baiacu-vs-aguaviva.PNG",
+    tech: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase (PostgreSQL)",
+      "Vercel",
+    ],
+    image: "img/kambambam.PNG",
     theme: "project-coral",
   },
   {
-    title: "Landing Page Responsiva",
-    category: "Site comercial",
-    filtros: ["Front-end"],
-    url: "https://caroline-suhvary.github.io/simples-pagina-responsiva/",
+    title: "KANBAN PÚBLICO — Gerenciamento de Estado & Drag-and-Drop",
+    category: "interatividade",
+    filtros: ["Dev Front-End"],
+    url: "https://kanban-publico-neon.vercel.app/",
     description: [
-      "Página web com menu e totalmente responsiva.",
-      "Feita apenas com HTML e CSS",
+      " Kanban público com drag-and-drop, etiquetas, filtros, tema claro/escuro (persistido em localStorage), Context API + useReducer para estado, e persistência via PostgreSQL com RLS.",
     ],
-    tech: ["HTML", "CSS"],
-    image: "img/pagina-responsiva.PNG",
+    tech: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Context API",
+      "Supabase",
+    ],
+    image: "img/kanban1.PNG",
     theme: "project-mint",
   },
   {
-    title: "Jogo de cartas - Tarot do Dia",
-    category: "Site comercial",
-    filtros: ["Aplicativo", "Front-end"],
-    url: "https://caroline-suhvary.github.io/tarot-do-dia/",
+    title: "DATA APP PYTHON — Painel de Faturamento",
+    category: "Business Intelligence",
+    filtros: ["Análise de Dados"],
+    url: "https://painel-faturamento-comercial.streamlit.app/",
     description: [
-      "Jogo de tarot; Clique no botão para misturar as cartas e selecione uma carta.",
-      "Feito com html, css e javascript puro; As cartas foram criadas apenas com CSS.",
+      "Análise Exploratória de Dados (EDA) aplicada a uma base operacional de grande volume, calculando KPIs em tempo real com gráficos dinâmicos em Plotly e exportação de relatórios.",
     ],
-    tech: ["HTML", "CSS", "Javascript"],
-    image: "img/tarot-do-dia.PNG",
+    tech: ["Python", "Pandas", "DuckDB", "Plotly", "Streamlit Cloud"],
+    image: "img/streamlit.PNG",
     theme: "project-sun",
   },
   {
-    title: "Joguinho: Block Puzzle - Quadradinhos Coloridos",
-    category: "games",
-    filtros: ["Aplicativo", "Front-end"],
-    url: "https://caroline-suhvary.github.io/quadradinhos-coloridos/",
+    title: "PAINEL FINANCEIRO com Excel Online e OfficeScripts (TypeScript)",
+    category: "Business Intelligence",
+    filtros: ["Automação", "Análise de Dados"],
+    url: "https://senacspedu-my.sharepoint.com/:x:/g/personal/caroline_arocha5_senacsp_edu_br/IQD_vOKWRavxTrN2EDy_m-WeAVJrfiSkFM4WAcUav1yIWYA?rtime=-J_4QdIl30g",
     description: [
-      "Utilize as teclas ← → para mover a peça para os lados",
-      "↓ acelera a queda, ↑ ou Espaço trocam a ordem das cores.",
-      "No celular, utilize os botões que aparecem abaixo.",
-      "Feito com html, css responsivo e javascript puro.",
+      "Modernização de fluxos de trabalho em planilha: transição de macros legadas em VBA para scripts modernos em TypeScript executáveis no Microsoft 365 Web.",
+      " Desenvolvimento de dashboard financeiro/operacional completo com filtros dinâmicos e controle de visão analítica",
     ],
-    tech: ["HTML", "CSS", "Javascript"],
-    image: "img/quadrados-coloridos.PNG",
+    tech: ["Excel Web", "Office Scripts (TypeScript)", "Power Query", "VBA"],
+    image: "img/excelonline.PNG",
     theme: "project-coral",
-  },
-  {
-    title: "Landing Page do livro 'A biblioteca da Meia Noite' ",
-    category: "Site comercial",
-    filtros: ["Front-end"],
-    url: "https://caroline-suhvary.github.io/sinopse-livro/",
-    description: [
-      "Landing Page contendo a Sinopse do livro A biblioteca da Meia-Noite, de Matt Haig",
-      "Página responsiva feita com html e css.",
-    ],
-    tech: ["HTML", "CSS"],
-    image: "img/livro-biblioteca.PNG",
-    theme: "project-mint",
   },
   {
     title: "Joguinho de TETRIS clássico",
     category: "games",
-    filtros: ["Aplicativo", "Front-end"],
+    filtros: ["Game"],
     url: "https://caroline-suhvary.github.io/tetris/",
     description: [
       "← → movem a peça, ↓ acelera a queda, ↑ ou Espaço giram a peça",
@@ -82,113 +77,44 @@ const projects = [
     image: "img/tetris.PNG",
     theme: "project-sun",
   },
-  {
-    title: "Análise de Dados completa em planilha do Excel",
-    category: "analise de dados",
-    filtros: ["Análise de Dados"],
-    url: "https://senacspedu-my.sharepoint.com/:x:/g/personal/caroline_arocha5_senacsp_edu_br/IQD_vOKWRavxTrN2EDy_m-WeAVJrfiSkFM4WAcUav1yIWYA?e=F9LR8M",
-    description: [
-      "Planilha contendo análise de dados de faturamento da Empresa XYZ",
-      "Contém opções de filtragem múltipla, digitando em caixas de pesquisa e cliando no botão de pesquisar",
-      "Também contém opções de filtragens em funções nativas do Excel. ",
-      "Tabelas dinâmicas, gráficos dinâmicos, KPIs, dashboard e botões de navegação entre as abas.",
-      "Utilizei linguagem SQL para criação de tabelas com dados agrupados, VBA e OfficeScripts(typescript) para filtragemdinâmica dos dados em caixas de pesquisa. ",
-    ],
-    tech: ["VBA", "Typescript", "funções"],
-    image: "img/dashboardexcel.png",
-    theme: "project-coral",
-  },
 ];
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /* EDITE AQUI: adicione certificados em image: "img/certificado.jpg". */
 const skills = [
   {
     name: "HTML5 & CSS3",
-    image: "img/html-css.png",
+    image: "img/logos/html-css.png",
     level: "Avançando",
     description: [
       "Crio páginas semânticas, acessíveis e bem estruturadas, pensando em SEO e em diferentes dispositivos.",
       "Desenvolvo layouts responsivos com Flexbox, Grid e Media Queries; animações suaves e estilos organizados.",
     ],
-    certificates: [
-      {
-        name: "Playlist de HTML e CSS do Otavio Miranda",
-        image: "img/certificados/playlist-html-css-otavio-miranda.png",
-        link: "https://www.youtube.com/@otaviomiranda/playlists",
-        tools: [],
-      },
-      {
-        name: "Playlist de HTML e CSS do Bro (em inglês)",
-        image: "img/certificados/playlist-html-css-bro.png",
-        link: "https://www.youtube.com/@brocodez/playlists",
-        tools: [],
-      },
-    ],
-    info_extra:
-      "Nem todos os cursos que eu fiz geram certificados, então aqui eu também estou acrescentando playlists do youtube que eu assisti e recomendo; e alguns projetinhos que eu fiz, mas são projetos dos cursos, em que eu apenas escrevia os códigos enquanto assistia os videos.",
+    certificates: [],
+    info_extra: "",
   },
   {
     name: "Tailwind CSS",
-    image: "img/tailwind.png",
+    image: "img/logos/tailwind-logo.png",
     level: "Praticando",
     description: [
       "Utilizo classes utilitárias e sistemas de design para construir interfaces consistentes com agilidade.",
     ],
-    certificates: [
-      {
-        name: "Curso com 207 videoaulas de React cuja maioria dos projetos foi feito utilizando TailwindCSS",
-        image: "img/certificados/react19-next16-certificate.PNG",
-        link: "",
-        tools: [],
-      },
-    ],
+    certificates: [],
     info_extra: "",
   },
   {
     name: "JavaScript",
-    image: "img/javascript.png",
+    image: "img/logos/javascript-logo.png",
     level: "Avançando",
     description: [
       "Manipulação do DOM, formulários e validações. Funções e consumo de APIs. ",
     ],
-    certificates: [
-      {
-        name: "Playlist de Javascript do Bro (em inglês)",
-        image: "",
-        link: "https://www.youtube.com/watch?v=lfmg-EJ8gm4&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=2",
-        tools: [],
-      },
-      {
-        name: "Projetinho: relógio digital",
-        image: "img/certificados/relogio-digital-bro.PNG",
-        link: "https://caroline-suhvary.github.io/relogio/",
-        tools: [],
-      },
-      {
-        name: "Projetinho: cronômetro",
-        image: "img/certificados/cronometro-bro.PNG",
-        link: "https://caroline-suhvary.github.io/cronometro/",
-        tools: [],
-      },
-      {
-        name: "Projetinho: temperatura das cidades",
-        image: "img/certificados/temperatura-cidades-bro.PNG",
-        link: "https://caroline-suhvary.github.io/temperatura-cidades/",
-        tools: [],
-      },
-      {
-        name: "Projetinho: calculadora",
-        image: "img/certificados/calculadora-bro.PNG",
-        link: "https://caroline-suhvary.github.io/calculadora/",
-        tools: [],
-      },
-    ],
-    info_extra:
-      "Nem todos os cursos que eu fiz geram certificados, então aqui eu também estou acrescentando playlists do youtube que eu assisti e recomendo; e alguns projetinhos que eu fiz, mas são projetos dos cursos, em que eu apenas escrevia os códigos enquanto assistia os videos.",
+    certificates: [],
+    info_extra: "",
   },
   {
     name: "React",
-    image: "img/react.png",
+    image: "img/logos/react.png",
     level: "Praticando",
     description: [
       "Aplicações com React 19 utilizando componentes, JSX, props, eventos, gerenciamento de estado e Hooks (useState, useEffect, useReducer, useContext, use e useRef). ",
@@ -200,7 +126,7 @@ const skills = [
     certificates: [
       {
         name: "Curso de React-19 contendo mais de 200 videolaulas apenas de react",
-        image: "img/certificados/react19-next16-certificate.PNG",
+        image: "",
         link: "",
         tools: [
           "Props",
@@ -220,7 +146,7 @@ const skills = [
   },
   {
     name: "Next.js",
-    image: "img/nextjs.png",
+    image: "img/logos/nextjs.png",
     level: "Estudando",
     description: [
       "Aplicações com Next.js 16 utilizando App Router, layouts, Server Components e Client Components.",
@@ -228,57 +154,37 @@ const skills = [
       "Implementação de autenticação, autorização e rotas protegidas, incluindo JWT, middleware e login social.",
       "Validação de dados, paginação, tratamento de erros e atualização de dados em tempo real com Server-Sent Events (SSE).",
     ],
-    certificates: [
-      {
-        name: "Next.Js",
-        image: "",
-        link: "",
-        tools: [],
-      },
-    ],
+    certificates: [],
     info_extra: "",
   },
   {
     name: "Excel",
-    image: "img/excel.png",
+    image: "img/logos/excel.png",
     level: "Avançado",
     description: [
       "Excel Avançado para análise de dados, relatórios gerenciais e automação de processos.",
       "Funções de pesquisa, estatística, matemática e financeira.",
       "Power Query, Power Pivot, Tabelas Dinâmicas, Gráficos Dinâmicos e Dashboards. ",
-      "Desenvolvimento de macros e soluções utilizando VBA.",
+      "Desenvolvimento de macros utilizando VBA. E macros online com OfficeScripts.",
+      "Criação de filtros avançados com OfficeScripts(typescript) no Excel online.",
     ],
-    certificates: [
-      {
-        name: "Excel",
-        image: "",
-        link: "",
-        tools: [],
-      },
-    ],
+    certificates: [],
     info_extra: "",
   },
   {
     name: "Figma",
-    image: "img/figma.png",
+    image: "img/logos/figma.png",
     level: "Praticando",
     description: [
       "Criação de protótipos de baixa e alta fidelidade para aplicações web e mobile. ",
       "Desenvolvimento de wireframes, fluxos de navegação e interfaces focadas em experiência do usuário (UX/UI).",
     ],
-    certificates: [
-      {
-        name: "Figma",
-        image: "",
-        link: "",
-        tools: [],
-      },
-    ],
+    certificates: [],
     info_extra: "",
   },
   {
     name: "Salesforce",
-    image: "img/salesforce.png",
+    image: "img/logos/salesforce.png",
     level: "Estudando",
     description: [
       "Gestão de contas, contatos, leads e oportunidades.",
@@ -286,25 +192,12 @@ const skills = [
       "Qualificação e conversão de leads.",
       "Acompanhamento de leads e oportunidades utilizando Kanban.",
     ],
-    certificates: [
-      {
-        name: "Salesforce na prátice: curso hands-on para administradores",
-        image: "img/certificados/certificado_salesforce_administrador.jpg",
-        link: "",
-        tools: [],
-      },
-      {
-        name: "Salesforce Essentials: Mastering CRM for Business Success",
-        image: "img/certificados/certificado_salesforce_administrator.jpg",
-        link: "",
-        tools: [],
-      },
-    ],
+    certificates: [],
     info_extra: "",
   },
   {
     name: "SQL e Banco de Dados",
-    image: "img/postgres.png",
+    image: "img/logos/postgres.png",
     level: "Praticando",
     description: [
       "Consultas SQL para extração, manipulação e consolidação de dados.",
@@ -312,19 +205,12 @@ const skills = [
       "Criação e manutenção de Views, Stored Procedures, Triggers e Jobs.",
       "Modelagem e análise de dados para geração de indicadores e relatórios.",
     ],
-    certificates: [
-      {
-        name: "Banco de Dados",
-        image: "",
-        link: "",
-        tools: [],
-      },
-    ],
+    certificates: [],
     info_extra: "",
   },
   {
     name: "Power BI",
-    image: "img/powerbi.png",
+    image: "img/logos/powerbi-logo.png",
     level: "Avançado",
     description: [
       "Extração, transformação e modelagem de dados com Power Query.",
@@ -339,6 +225,29 @@ const skills = [
         tools: [],
       },
     ],
+    info_extra: "",
+  },
+  {
+    name: "Python",
+    image: "img/logos/python-logo.png",
+    level: "Praticando",
+    description: [
+      "Análise Exploratória de Dados (EDA), manipulação e tratamento de grandes volumes de dados com Pandas e DuckDB.",
+      "Construção de gráficos interativos com Plotly e criação e deploy de Data Apps web interativos na nuvem via Streamlit.",
+    ],
+    certificates: [],
+    info_extra: "",
+  },
+  {
+    name: "Supabase",
+    image: "img/logos/supabase-logo.png",
+    level: "Praticando",
+    description: [
+      "Integração de banco de dados PostgreSQL com Supabase.",
+      "Implementação de autenticação de usuários, armazenamento e gestão de arquivos (Storage) com validações",
+      "configuração de políticas de segurança e controle de acesso a nível de linha (Row Level Security - RLS)",
+    ],
+    certificates: [],
     info_extra: "",
   },
 ];
@@ -437,22 +346,22 @@ function openSkill(index, button) {
     ${skill.description.map((item) => `<li>${item}</li>`).join("")}
   </ul> `;
   document.querySelector("#info-extra").textContent = skill.info_extra;
-  document.querySelector("#certificate-grid").innerHTML = skill.certificates
-    .map(
-      (certificate, position) => `
-      <article class="certificates">
-        ${
-          certificate.image
-            ? `<img src="${certificate.image}" alt="Certificado: ${certificate.name}">`
-            : `<div class="certificate-placeholder"><b>☆</b><span>CERTIFICADO ${position + 1}</span></div>`
-        }
-        <h3>${certificate.name}</h3>
-        ${certificate.tools && `<div class="tags">${certificate.tools.map((item) => `<span>${item}</span>`).join("")}</div>`}
-        <small>${certificate.link && `<a href="${certificate.link}">acesse aqui</a>`}</small>
-        
-      </article>`,
-    )
-    .join("");
+  // document.querySelector("#certificate-grid").innerHTML = skill.certificates
+  //   .map(
+  //     (certificate, position) => `
+  //     <article class="certificates">
+  //       ${
+  //         certificate.image
+  //           ? `<img src="${certificate.image}" alt="Certificado: ${certificate.name}">`
+  //           : `<div class="certificate-placeholder"><b>☆</b><span>CERTIFICADO ${position + 1}</span></div>`
+  //       }
+  //       <h3>${certificate.name}</h3>
+  //       ${certificate.tools && `<div class="tags">${certificate.tools.map((item) => `<span>${item}</span>`).join("")}</div>`}
+  //       <small>${certificate.link && `<a href="${certificate.link}">acesse aqui</a>`}</small>
+
+  //     </article>`,
+  //   )
+  //   .join("");
   modal.hidden = false;
   document.body.classList.add("modal-open");
   closeButton.focus();
