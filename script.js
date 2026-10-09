@@ -172,6 +172,18 @@ const skills = [
     info_extra: "",
   },
   {
+    name: "Typescript",
+    image: "img/logos/typescript-logo.png",
+    level: "Avançado",
+    description: [
+      "Tipagem estática, interfaces, type aliases, generics e utility types.",
+      "Aplicação na construção de rotas, componentes tipados em React/Next.js",
+      "integração segura com APIs/Supabase e automação web via OfficeScripts.",
+    ],
+    certificates: [],
+    info_extra: "",
+  },
+  {
     name: "Figma",
     image: "img/logos/figma.png",
     level: "Praticando",
