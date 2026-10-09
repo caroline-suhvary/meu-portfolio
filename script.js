@@ -210,7 +210,7 @@ const skills = [
   },
   {
     name: "Power BI",
-    image: "img/logos/powerbi-logo.png",
+    image: "img/logos/powerBI-logo.png",
     level: "Avançado",
     description: [
       "Extração, transformação e modelagem de dados com Power Query.",
