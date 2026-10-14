@@ -96,7 +96,7 @@ const projects = [
     ],
     tech: ["html", "CSS", "Javascript"],
     image: "img/tetris.PNG",
-    theme: "project-sun",
+    theme: "project-mint",
   },
 ];
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
