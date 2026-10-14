@@ -1,6 +1,27 @@
 /* EDITE AQUI: troque links, textos, tecnologias e imagens dos projetos. */
 const projects = [
   {
+    title:
+      "Sem Papas — Aplicação Web de Chat em Tempo Real com automatização de Ciclo de Vida",
+    category: "produtividade",
+    filtros: ["Dev Full Stack", "NoSQL Database"],
+    url: "https://sem-papas.web.app/",
+    description: [
+      "• Sala pública instantânea (sem necessidade de login) para testes rápidos e grupos privados via código de convite.",
+      "• Autenticação com Google e E-mail/Senha com confirmação obrigatória por e-mail e regras de segurança rígidas no Cloud Firestore.",
+      "• Automatização de retenção de dados e exclusão de contas inativas executada via GitHub Actions e script customizado com Firebase Admin SDK e Nodemailer, mantendo custo zero de infraestrutura.",
+    ],
+    tech: [
+      "Firebase",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Cloud Platform",
+    ],
+    image: "img/sem-papas-site.PNG",
+    theme: "project-sun",
+  },
+  {
     title: "MEU KAMBAMBAM — Kanban Full Stack & Colaborativo",
     category: "produtividade",
     filtros: ["Dev Full Stack"],
@@ -258,6 +279,18 @@ const skills = [
       "Integração de banco de dados PostgreSQL com Supabase.",
       "Implementação de autenticação de usuários, armazenamento e gestão de arquivos (Storage) com validações",
       "configuração de políticas de segurança e controle de acesso a nível de linha (Row Level Security - RLS)",
+    ],
+    certificates: [],
+    info_extra: "",
+  },
+  {
+    name: "Firebase",
+    image: "img/logos/firebase-logo.png",
+    level: "Praticando",
+    description: [
+      "Arquitetura Serverless & BaaS (Backend-as-a-Service)",
+      "Autenticação e Gestão de Identidade (Firebase Auth)",
+      "Banco de Dados Não-Relacional (Cloud Firestore)",
     ],
     certificates: [],
     info_extra: "",
