@@ -48,7 +48,7 @@ const projects = [
     title: "Scrumbão — Gestão Ágil Didática & Scrum Master",
     category: "Gestão de Projetos",
     filtros: ["Dev Full Stack", "Gestão de Projetos"],
-    url: "https://kambao.vercel.app/",
+    url: "https://scrumbao.vercel.app/",
     description: [
       "Live Demo Pedagógico de Scrum-Master com guia e demonstrativo interativo salvo em memória local sem necessidade de cadastro.",
       "Criação de Scrums privados salvos na nuvem e convite seguro por e-mail e link direto para até 6 participantes.",
